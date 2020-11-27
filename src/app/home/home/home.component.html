@@ -1,0 +1,16 @@
+<h1 class="text-primary">Personas cerca de ti</h1>
+<hr>
+<h4>Consulta el servicio de los siguientes profesionales</h4>
+<div class="jumbotron bg-light">
+    <div class="card-columns">
+        <div class="card" *ngFor="let user of usuarios">
+            <img src="{{user.avatar}}" class="card-img-top" alt="userImg">
+            <div class="card-body">
+              <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+              <hr>
+              <p class="h5"><b>Email:</b> {{user.email}}</p>
+              <small class="card-text"><b>Citapp number:</b> {{user.id}}</small>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<h1>¡Regístrate! <i class="far fa-smile-beam text-primary"></i></h1>
+<h3>Alguien te espera...</h3>
+<hr>
+<form autocomplete="off" class="bg-light" [formGroup]="form" (ngSubmit)="enviarInfo()">
+    <div class="border border-dark p-5">
+        <div class="form-group row">
+            <label for="nombre" class="text-dark col-2 col-form-label">Nombre: </label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre" [class.is-invalid]="nombreVal">
+                <div class="invalid-feedback" *ngIf="nombreVal">Ingresa correctamente los datos</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="empleo" class="text-dark col-2 col-form-label">Empleo: </label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="Independiente" formControlName="empleo" [class.is-invalid]="empleoVal">
+                <div class="invalid-feedback" *ngIf="empleoVal">Ingresa correctamente el correo</div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="correo" class="text-dark col-2 col-form-label">Correo Electrónico: </label>
+            <div class="col-8">
+                <input type="text" class="form-control" placeholder="ejemplo@gmail.com" formControlName="correo" [class.is-invalid]="correoVal">
+                <div class="invalid-feedback" *ngIf="correoVal">Ingresa correctamente los datos</div>
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <div class="col-5 m-2">
+                <input type="password" class="form-control" placeholder="Ingresa tu contraseña" formControlName="contra" [class.is-invalid]="contraVal">
+                <div class="invalid-feedback" *ngIf="contraVal">Ingresa correctamente los datos</div>
+            </div>
+            <div class="col-5 m-2">
+                <input type="password" class="form-control" placeholder="Confirma tu contraseña" formControlName="confirma" [class.is-invalid]="confirmaVal">
+                <div class="invalid-feedback" *ngIf="confirmaVal">Ingresa correctamente los datos</div>
+            </div>
+            
+        </div>
+
+        <div class="form-group row">
+            <div class="col-12 input-group">
+                <button [disabled]="!form.valid" class="btn btn-success btn-block" type="submit">Enviar Información</button>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-success mt-5">
+        Usuario Creado
+        <p>Id: {{usuario.id}} </p>
+        <p>Nombre: {{usuario.nombre}}</p>
+        <p>Empleo: {{usuario.trabajo}}</p>
+    </div>
+</form>

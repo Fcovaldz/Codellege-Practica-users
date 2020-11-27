@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <button (click)="getAllTasks()">getAllTasks()</button>
+  <button (click)="getTask()">getTask()</button>
+  <button (click)="createTask()">createTask()</button>
+  <button (click)="updateTask()">updateTask()</button>
+  <button (click)="deleteTask()">deleteTask()</button>
+</div>
+
+
+    <router-outlet></router-outlet>
+</div>

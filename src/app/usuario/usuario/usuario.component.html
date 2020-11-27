@@ -1,0 +1,14 @@
+  <div class="jumbotron">
+    <div class="row">
+        <img class="col-3" src="{{usuario.avatar}}" alt="userImg">
+        <div class="col-5 border" [class.border-danger]="usuario.id | custom" [class.border-primary]="!(usuario.id | custom)">
+            <h1>{{usuario.first_name}} {{usuario.last_name}}</h1>
+
+            <h3 class="text-secondary">¿Necesitas ayuda de <span class="h3 text-dark">{{usuario.first_name}}</span>?</h3>
+            <h3>¡Envíale un mensaje! {{usuario.email}}</h3>
+        </div>
+    </div>
+    <div class="div mt-5">
+        <button class="btn btn-outline-danger btn-block">Contrata el servicio Premium</button>
+    </div>
+</div>
